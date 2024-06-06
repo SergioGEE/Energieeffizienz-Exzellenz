@@ -26,6 +26,9 @@
     .large-margin {
         margin-bottom: 1em; /* Erhöht den Abstand zwischen den Absätzen */
     }
+    .overline {
+        text-decoration: overline;
+    }
 </style>
 </head>
 <body class="bg-gray-100 p-6">
@@ -167,19 +170,19 @@
                 </tr>
             </tbody>
         </table>
-        <p>Die Verlustleistung und Verlustenergie werden wie folgt berechnet:</p>
-        <ul class="list-disc pl-6 mb-4">
-            <li>USV-Anlagen: Verlustleistung = mittlere Leistung * 0.03 * 8'760 h/a</li>
-            <li>Transformatoren: Verlustleistung = mittlere Leistung * 0.04 * 8'760 h/a</li>
-            <li>Kabel und Leitungen: Verlustleistung = mittlere Leistung * 0.03 * 8'760 h/a</li>
-            <li>Beleuchtung: Verlustleistung = (13.76 - 5.53) W/m² * Beleuchtungsfläche</li>
-            <li>Dieselelektrische Notstromanlagen: Verlustleistung = Stückzahl * 40'000 kWh</li>
-        </ul>
-        <p>Die Verlustkosten und CO₂-Emissionen werden wie folgt berechnet:</p>
-        <ul class="list-disc pl-6">
-            <li>Verlustkosten = Verlustenergie (kWh) * Strompreis CHF/kWh</li>
-            <li>CO₂-Emissionen = Verlustenergie (kWh) * 0.128 kg CO₂/kWh</li>
-        </ul>
+        <p>Die Verlustenergie werden wie folgt berechnet:</p>
+<ul class="list-disc pl-6 mb-4">
+    <li>USV-Anlagen: Verlustenergie = <span class="overline">P</span> &middot; 3% &middot; 8'760 h/a</li>
+    <li>Transformatoren: Verlustenergie = <span class="overline">P</span> &middot; 4% &middot; 8'760 h/a</li>
+    <li>Kabel und Leitungen: Verlustenergie = <span class="overline">P</span> &middot; 3% &middot; 8'760 h/a</li>
+    <li>Beleuchtung: Verlustenergie = (13.76 - 5.53) W/m² &middot; A<sub>beleuchtet</sub></li>
+    <li>Dieselelektrische Notstromanlagen: Verlustenergie = Stückzahl &middot; 40'000 kWh</li>
+</ul>
+<p>Die Verlustkosten und CO₂-Emissionen werden wie folgt berechnet:</p>
+<ul class="list-disc pl-6">
+    <li>Verlustkosten = Verlustenergie (kWh) &middot; Strompreis (CHF/kWh)</li>
+    <li>CO₂-Emissionen = Verlustenergie (kWh) &middot; 0.128 kg CO₂/kWh</li>
+</ul>
         <button class="bg-blue-500 text-white px-4 py-2 rounded mt-4" onclick="showPage('result-page')">Zurück</button>
     </div>
 
